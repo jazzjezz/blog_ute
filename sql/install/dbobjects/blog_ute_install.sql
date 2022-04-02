@@ -1,4 +1,4 @@
-CREATE DATABASE blog_ute;
+CREATE DATABASE IF NOT EXISTS blog_ute;
 GRANT ALL PRIVILEGES ON blog_ute.* TO 'blog_ute'@'%' IDENTIFIED BY 'root';
 
 DELIMITER \\
