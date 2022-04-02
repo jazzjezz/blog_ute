@@ -1,4 +1,4 @@
-Blog_ute con mariadb
+# Blog_ute con mariadb
 Proyecto escolar con una imagen modificada de mariadb:latest
 
 Base de datos relacional con esquema
