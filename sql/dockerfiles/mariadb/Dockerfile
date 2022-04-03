@@ -18,4 +18,5 @@ COPY install/jobs/cron/blog_ute_backup /etc/cron.d/blog_ute_backup
 RUN chmod +x ~/jobs/blog_ute_backup.sh
 #instalación de cron
 RUN apt update && apt upgrade -y && apt install -y cron  \
+    && update-rc.d cron defaults \
     && service cron start
