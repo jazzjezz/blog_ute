@@ -2,11 +2,14 @@
 FROM mariadb:latest as ute_blog
 MAINTAINER jazzjezz jazzjezz@disroot.org
 
+ARG ROOT_PASSWORD
+ARG PASSWORD
 ENV MARIADB_DATABASE=blog_ute
 ENV MARIADB_USER=blog_ute
-ENV MARIADB_ROOT_PASSWORD=`openssl rand -base64 32`
-ENV MARIADB_PASSWORD=`openssl rand -base64 32`
+ENV MARIADB_ROOT_PASSWORD=${ROOT_PASSWORD}
+ENV MARIADB_PASSWORD=${PASSWORD}
 ENV MARIADB_ROOT_HOST=localhost
+
 #instalación de los objetos en base de datos
 COPY install/dbobjects/blog_ute_install.sql /docker-entrypoint-initdb.d/
 #creación de carpetas para el job y los respaldos
