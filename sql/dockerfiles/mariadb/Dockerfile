@@ -1,4 +1,4 @@
-#imagen para base de datos no relacional con MariaDB
+#imagen para base de datos relacional con MariaDB
 FROM mariadb:latest as ute_blog
 MAINTAINER jazzjezz jazzjezz@disroot.org
 
